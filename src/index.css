@@ -1,0 +1,25 @@
+
+body{
+    background-color: #63a4ff;
+    background-image: linear-gradient(0deg, #63a4ff 0%, #83eaf1 74%);
+    min-height: 100vh;
+}
+
+.browser{
+    width: 78%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorites{
+    width: 20%;
+    min-height: 100%;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    padding-top: 10px;
+    background: rgba(20,20,20,0.2);
+    padding-bottom: 10px;
+}

@@ -1,0 +1,80 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#weatherIcon{
+    width: 80px;
+    display: block;
+    margin:auto;
+}
+
+.weatherTarget{
+    border: 2px solid rgb(250,250,250);
+    width: 200px;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    color:rgb(250,250,250);
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.titleHeart{
+    justify-content: space-between;
+    display: flex;
+}
+
+#cityName{
+    width: 180px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-top: 4px;
+}
+
+#heart{
+    width: 19px;
+    height: 19px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#tempeture{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.sunriseSunset{
+    font-size: 1em;
+    display: inline-block;
+}
+
+.sunTime{
+    display: inline-block;
+}
+
+.sunTime::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: grey;
+    display: inline-block;
+    margin: 5px;
+    margin-bottom: -2px;
+}
+
+
+.sunriseSunsetImage{
+    width: 20px;
+    display: inline-block;
+}
+
+#windVelocity{
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+#windImage{
+    width: 16px;
+    display: inline-block;
+    margin-left: 3px;
+}

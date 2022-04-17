@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+.cityWeather{
+    height: 100%;
+    width: 80%;
+    margin:0;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+#addToFavoritesBtn{
+    position: absolute;
+    width: 25px;
+    top: 10px;
+    left: 10px;
+}
+
+#cityWeatherPrincipalData{
+    display: flex;
+    align-items: center;
+}
+
+#cityWeatherName{
+    font-family: 'Montserrat';
+    font-size:6.5em;
+    display: inline-block;
+}
+
+
+#cityWeatherTemperatureNow{
+    font-family: 'Akshar';
+    font-size: 4em;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#cityWeatherTemperatureMaxMin{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.6em;
+    margin-left: 15px;
+}
+
+
+#cityWeatherTemperatureMax{
+    font-family: 'Akshar';
+    color:rgb(242, 64, 64);
+}
+
+#cityWeatherTemperatureMin{
+    font-family: "Akshar";
+    color:rgb(87, 87, 211);
+}
+
+#cityWeatherWindRain{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+#cityWeatherWind, #cityWeatherRain{
+    font-family: "Akshar";
+    font-size: 1.4em;
+}
+
+#cityWeatherWind>img,#cityWeatherRain > img{
+    width: 15px;
+    height: 15px;
+}
+
+#cityWeatherStateSky{
+    font-family: 'Quicksand';
+    display: inline-block;
+    font-size: 2.3em;
+    color: white;
+    margin-left: 30px;
+}
+
+.forecastTitle{
+    font-family: 'Montserrat';
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.forecast{
+    display: inline-block;
+    font-family: 'Akshar';
+    padding: 0px 9px 0px 9px;
+    border-left: 1px solid rgb(88, 88, 222);
+    border-right: 1px solid rgb(88, 88, 222);
+}
+
+.forecastTemp{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.forecastRain{
+    font-size: 0.8;
+    text-align: center;
+}
+
+.forecastVelocity{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.forecastVelocity > span{
+    font-size: 0.4em;
+}
+
+.forecastHour{
+    text-align: center;
+    font-size: 0.6em;
+}
