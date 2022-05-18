@@ -16,7 +16,8 @@
     font-family: 'Lucida Sans';
     color:rgb(250,250,250);
     margin: auto;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 .titleHeart{
@@ -77,4 +78,10 @@
     width: 16px;
     display: inline-block;
     margin-left: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+    .weatherTarget{
+        margin-bottom: 15px;
+    }
 }

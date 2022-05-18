@@ -10,7 +10,7 @@ const CityWeatherForecast = ({forecast}) => {
         hour: initialHour+i,
     }))
     return (
-    <div>
+    <div className='forecastGroup'>
         {data.map((hour,i) => <Forecast 
                                 key = {i} 
                                 hour = {hour.hour}

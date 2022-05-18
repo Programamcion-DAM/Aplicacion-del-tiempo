@@ -15,11 +15,32 @@ body{
 
 .favorites{
     width: 20%;
-    min-height: 100%;
+    height: 100%;
     position: absolute;
     right: 0px;
     top:0px;
-    padding-top: 10px;
     background: rgba(20,20,20,0.2);
-    padding-bottom: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
+
+
+@media only screen and (max-width: 900px) {
+    .browser{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .favorites{
+        width: 100%;
+        position: relative;
+        background: rgba(20,20,20,0.2);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        overflow-y: none;
+        scroll-behavior: none;
+    }
+  }

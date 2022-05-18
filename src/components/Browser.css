@@ -70,4 +70,32 @@
     align-self: start; 
     position: relative;
     background: rgba(250,250,250,0.8);
+    z-index: 2;
+}
+
+@media only screen and (max-width: 900px) {
+    .container-1{
+        width: 310px;
+    }
+    .container-1 input#search{
+        width: 310px;
+    }
+    .browserOption{
+        width: 310px;
+    }
+    .browserOptions{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container-1{
+        width: 270px;
+    }
+    .container-1 input#search{
+        width: 270px;
+    }
+    .browserOption{
+        width: 270px;
+    }
 }

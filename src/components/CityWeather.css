@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+:root{
+    --sizeWeatherName: 6.5em;
+    --sizeTemperatureNow: 4em;
+    --sizeTemperatureMaxMin: 1.6em;
+    --sizeWindAndRain: 1.4em;
+    --sizeStateSky: 2.3em;
+    --sizeForecastTitle: 2em;
+    --sizeForecastTemp: 1.1em;
+    --sizeForecastRainWind: 0.8em;
+    --sizeForecastVelocity:0.4em;
+    --sizeForecastHour: 0.6em;
+}
+
 .cityWeather{
     height: 100%;
     width: 80%;
@@ -22,22 +36,21 @@
 
 #cityWeatherName{
     font-family: 'Montserrat';
-    font-size:6.5em;
+    font-size: var(--sizeWeatherName);
     display: inline-block;
 }
 
 
 #cityWeatherTemperatureNow{
     font-family: 'Akshar';
-    font-size: 4em;
+    font-size: var(--sizeTemperatureNow);
     display: inline-block;
     margin-left: 20px;
 }
 
 #cityWeatherTemperatureMaxMin{
     display: inline-block;
-    margin-left: 10px;
-    font-size: 1.6em;
+    font-size: var(--sizeTemperatureMaxMin);
     margin-left: 15px;
 }
 
@@ -59,7 +72,7 @@
 
 #cityWeatherWind, #cityWeatherRain{
     font-family: "Akshar";
-    font-size: 1.4em;
+    font-size: var(--sizeWindAndRain);
 }
 
 #cityWeatherWind>img,#cityWeatherRain > img{
@@ -70,14 +83,14 @@
 #cityWeatherStateSky{
     font-family: 'Quicksand';
     display: inline-block;
-    font-size: 2.3em;
+    font-size: var(--sizeStateSky);
     color: white;
     margin-left: 30px;
 }
 
 .forecastTitle{
     font-family: 'Montserrat';
-    font-size: 2em;
+    font-size: var(--sizeForecastTitle);
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -91,25 +104,75 @@
 }
 
 .forecastTemp{
-    font-size: 1.1em;
+    font-size: var(--sizeForecastTemp);
     text-align: center;
 }
 
 .forecastRain{
-    font-size: 0.8;
+    font-size: var(--sizeForecastRainWind);
     text-align: center;
 }
 
 .forecastVelocity{
     text-align: center;
-    font-size: 0.8em;
+    font-size: var(--sizeForecastRainWind);
 }
 
 .forecastVelocity > span{
-    font-size: 0.4em;
+    font-size: var(--sizeForecastVelocity);
 }
 
 .forecastHour{
     text-align: center;
-    font-size: 0.6em;
+    font-size: var(--sizeForecastHour);
+}
+
+@media only screen and (max-width: 900px) {
+    :root{
+        --sizeWeatherName: 5.5em;
+        --sizeTemperatureNow: 4em;
+        --sizeTemperatureMaxMin: 1.9em;
+        --sizeWindAndRain: 1.5em;
+        --sizeStateSky: 3em;
+        --sizeForecastTitle: 3em;
+        --sizeForecastTemp: 1.8em;
+        --sizeForecastRainWind: 1.2em;
+        --sizeForecastVelocity:1em;
+        --sizeForecastHour: 1.2em;
+    }
+    #cityWeatherPrincipalData{
+        display: block;
+        align-items: center;
+    }
+    #cityWeatherName{
+        display: block;
+    }
+    #cityWeatherTemperatureNow{
+        display: inline-block;
+        margin-left: 20px;
+    }
+    #cityWeatherTemperatureMaxMin{
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .forecastGroup{
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :root{
+        --sizeWeatherName: 3.25em;
+        --sizeTemperatureNow: 2em;
+        --sizeTemperatureMaxMin: 0.8em;
+        --sizeWindAndRain: 0.7em;
+        --sizeStateSky: 1.4em;
+        --sizeForecastTitle: 1.5em;
+        --sizeForecastTemp: 1em;
+        --sizeForecastRainWind: 0.7em;
+        --sizeForecastVelocity:0.5em;
+        --sizeForecastHour: 0.7em;
+    }
 }

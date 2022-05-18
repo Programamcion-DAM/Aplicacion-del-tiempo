@@ -6,7 +6,8 @@ const CityWeather = ({data,cityName,handleFavoritesCities,deleteCity,idProvince,
     const {lluvia,pronostico,stateSky,temperatura_actual,temperaturas,viento} = data;
     
     const isTheCityOnFavorites = ()=>{
-        let list = JSON.parse(localStorage.getItem("favoritesCities")).map((city)=> city.idTown === idTown? true:false);
+        let list = JSON.parse(localStorage.getItem("favoritesCities")).map(
+            (city)=> city.idTown === idTown? true:false);
         return list.includes(true);
     }
     

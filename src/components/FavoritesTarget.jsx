@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import './ZoneWeather.css';
+import './FavoritesTarget.css';
 import { helpHttp } from '../helpers/helpHttp'
 
 const api = helpHttp();
 
-const ZoneWather = ({idProvince,idTown,deleteCity}) => {
-    const [data, setData] = useState([])
-    
+const FavoritesTarget = ({idProvince,idTown,deleteCity}) => {
+    //Estado en que se almacena los datos de la provincia.
+    const [data, setData] = useState([]);
+
+    //Hacemos cada vez que inicie o cambio el id una peticion a la api con los datos
     useEffect(() => {
         if(!idTown)return;
         let url = `https://www.el-tiempo.net/api/json/v2/provincias/${idProvince}/municipios/${idTown}`
@@ -40,22 +42,40 @@ const ZoneWather = ({idProvince,idTown,deleteCity}) => {
         <div className='weatherTarget'>
             <div className='titleHeart'>
                 <h2 id="cityName">{cityName && cityName}</h2>
-                { idTown && <img onClick={()=>deleteCity(idTown)}id="heart" src="http://localhost:3000/images/heartRed.png" alt="Guardar en favoritos" />}
+                { idTown && <img 
+                            onClick={()=>deleteCity(idTown)}
+                            id="heart" 
+                            src="http://localhost:3000/images/heartRed.png" 
+                            alt="Guardar en favoritos" />}
             </div>  
-            {stateSky && <img src={getUrlImage()} alt={stateSky.description} id="weatherIcon"></img>}
+            {stateSky && <img 
+                        src={getUrlImage()} 
+                        alt={stateSky.description} 
+                        id="weatherIcon"></img>}
+            
             <h2 id="tempeture">{temp && temp+"ºC"}</h2>
+
             <div className='sunTime'>
                 <h2 className='sunriseSunset'>{sunrise && sunrise}</h2>
-                {sunrise && <img className= "sunriseSunsetImage"src="http://localhost:3000/images/sunrise.png" alt="Hora de amanecez"></img>}
+                {sunrise && <img 
+                        className= "sunriseSunsetImage"
+                        src="http://localhost:3000/images/sunrise.png" 
+                        alt="Hora de amanecer"></img>}
             </div>
             <div className='sunTime'>
                 <h2 className='sunriseSunset'>{sunset && sunset}</h2>
-                {sunset && <img src='http://localhost:3000/images/sunset.png'className='sunriseSunsetImage'alt="Hora de atardecer"></img>}
+                {sunset && <img 
+                            src='http://localhost:3000/images/sunset.png'
+                            className='sunriseSunsetImage'
+                            alt="Hora de atardecer"></img>}
             </div>
             <h2 id="windVelocity">{windVelocity && windVelocity}</h2>
-            {windVelocity && <img id = "windImage" src="http://localhost:3000/images/wind.png" alt = "Velocidad del viento"></img>}
+            {windVelocity && <img 
+                            id = "windImage" 
+                            src="http://localhost:3000/images/wind.png" 
+                            alt = "Velocidad del viento"></img>}
         </div>
     )
 }
 
-export default ZoneWather
+export default FavoritesTarget
